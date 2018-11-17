@@ -14,7 +14,7 @@ module.exports = function(app) {
 
 	/* Web3 Initialization */
 	//var web3 = new Web3(new Web3.providers.IpcProvider(app.web3.provider, client));
-	var web3 = new Web3(new Web3.providers.HttpProvider(app.web3.provider));
+	var web3 = new Web3(new Web3.providers.HttpProvider(app.web3.provider)); // Using Infura
 
 	/* Contract initialization */
 	var contractObj = new web3.eth.Contract(app.contract.abi, app.contract.address);
