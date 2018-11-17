@@ -64,6 +64,10 @@ module.exports = function(app) {
 		/* Test Transaction End */
 	}
 	
+	app.get('/test', function(req, res){
+		return res.send({status: true, msg: 'this is a test!'});
+	});
+
 	/* Airdrop Usage */
 	app.post('/airdrop', async function(req, res){
 		if(!hasRights(req))
